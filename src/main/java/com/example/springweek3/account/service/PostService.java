@@ -50,10 +50,13 @@ public class PostService {
         if(!email.equals(post.getUserEmail())){
             throw new RuntimeException("Account Check");
         }
+        
+        
 
         post.update(postRequestDto);
 
         return new GlobalResponseDto("Success Update Post", HttpStatus.OK.value());
+        //babo
     }
 
     @Transactional
